@@ -1,0 +1,157 @@
+
+
+/* ===== BASE STYLING ===== */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  color: #7B4019;
+  
+  /* Your SVG pattern */
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='120' height='80' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(240,6.7%,17.6%,1)'/><path d='M-50.129 12.685C-33.346 12.358-16.786 4.918 0 5c16.787.082 43.213 10 60 10s43.213-9.918 60-10c16.786-.082 33.346 7.358 50.129 7.685'  stroke-width='1' stroke='hsla(47,80.9%,61%,1)' fill='none'/><path d='M-50.129 32.685C-33.346 32.358-16.786 24.918 0 25c16.787.082 43.213 10 60 10s43.213-9.918 60-10c16.786-.082 33.346 7.358 50.129 7.685'  stroke-width='1' stroke='hsla(4.1,89.6%,58.4%,1)' fill='none'/><path d='M-50.129 52.685C-33.346 52.358-16.786 44.918 0 45c16.787.082 43.213 10 60 10s43.213-9.918 60-10c16.786-.082 33.346 7.358 50.129 7.685'  stroke-width='1' stroke='hsla(186.8,100%,41.6%,1)' fill='none'/><path d='M-50.129 72.685C-33.346 72.358-16.786 64.918 0 65c16.787.082 43.213 10 60 10s43.213-9.918 60-10c16.786-.082 33.346 7.358 50.129 7.685'  stroke-width='1' stroke='hsla(258.5,59.4%,59.4%,1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* Centered content wrapper */
+.main {
+  background-color: rgba(255, 255, 255, 0.85); /* Softens background */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ===== HEADINGS ===== */
+h1, h2, h3 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #FF7D29;
+}
+
+/* ===== FORM ===== */
+form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+input {
+  padding: 0.75rem;
+  margin: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 180px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+/* ===== BUTTON ===== */
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #FF7D29;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #FFBF78;
+  color: #7B4019;
+}
+
+/* ===== UV RESULT CARD ===== */
+.container {
+  background: #FFBF78;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  display: inline-block;
+  margin-top: 2rem;
+  max-width: 600px;
+  width: 100%;
+  color: #7B4019;
+}
+
+/* ===== UV Risk Levels ===== */
+.safe {
+  color: #2e7d32;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.moderate {
+  color: #FF7D29;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.high {
+  color: #7B4019;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+/* ===== BACK BUTTON ===== */
+.back-button {
+  display: inline-block;
+  /* margin-top: 2rem; */
+  padding: 0.75rem 1.5rem;
+  background: #7B4019;
+  color: white;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background: #FF7D29;
+  color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 500px) {
+  input {
+    width: 100%;
+  }
+
+  form, .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.5rem;
+  }
+
+  button, .back-button {
+    width: 100%;
+    padding: 1rem;
+  }
+}
